@@ -1,0 +1,16 @@
+{
+  "name": "Omega_AI",
+  "version": 2,
+  "builds": [
+    {
+      "src": "omega.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/omega.html"
+    }
+  ]
+}
