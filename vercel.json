@@ -1,13 +1,28 @@
 {
   "name": "Omega_AI",
   "version": 2,
-  "builds": [
-    {
-      "src": "omega.html",
-      "use": "@vercel/static"
-    }
-  ],
+  "public": true,
   "routes": [
+    {
+      "src": "/favicon.*",
+      "dest": "/favicon.ico",
+      "headers": { "Cache-Control": "public, immutable, max-age=31536000" }
+    },
+    {
+      "src": "/apple-touch-icon.*",
+      "dest": "/apple-touch-icon.png",
+      "headers": { "Cache-Control": "public, immutable, max-age=31536000" }
+    },
+    {
+      "src": "/android-chrome.*",
+      "dest": "/$1",
+      "headers": { "Cache-Control": "public, immutable, max-age=31536000" }
+    },
+    {
+      "src": "/logo1.jpg",
+      "dest": "/logo1.jpg",
+      "headers": { "Cache-Control": "public, immutable, max-age=31536000" }
+    },
     {
       "src": "/(.*)",
       "dest": "/omega.html"
